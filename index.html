@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- TODO: título e descrição reais do cliente. -->
+    <title>Nome do Cliente</title>
+    <meta name="description" content="Descrição curta do cliente para o Google." />
+    <meta name="theme-color" content="#1a1a1a" />
+
+    <!-- Compartilhamento (Open Graph). Troque pelos dados do cliente. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nome do Cliente" />
+    <meta property="og:description" content="Descrição curta do cliente." />
+    <meta property="og:locale" content="pt_BR" />
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container site-header__bar">
+        <!-- TODO: troque pelo logo ou nome do cliente. -->
+        <a href="#inicio" class="site-header__brand">Nome do Cliente</a>
+
+        <nav class="site-nav" aria-label="Navegação principal">
+          <button class="site-nav__toggle" aria-expanded="false" aria-controls="menu">
+            <span class="visually-hidden">Abrir menu</span>
+            <span class="site-nav__bars" aria-hidden="true"></span>
+          </button>
+          <ul id="menu" class="site-nav__list">
+            <!-- TODO: ajuste os links conforme as seções do cliente. -->
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!--
+        A estrutura é livre por cliente. Monte com blocos
+        <section class="section"> contendo um <div class="container">.
+        A lógica completa está no AGENTS.md. A seção abaixo é só um
+        exemplo do padrão: edite ou remova.
+      -->
+      <section id="sobre" class="section">
+        <div class="container">
+          <h1 class="section__title">Título da seção</h1>
+          <p class="section__text">
+            Parágrafo de exemplo. Troque por um texto real, em português natural,
+            direto e sem jargão.
+          </p>
+          <a class="btn" href="#contato">Chamada para ação</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div>
+          <!-- TODO: contatos reais do cliente. -->
+          <p class="site-footer__contact">
+            <a href="https://wa.me/55DDDNUMERO" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="mailto:contato@cliente.com">contato@cliente.com</a>
+          </p>
+          <p class="site-footer__copy">© <span data-year></span> Nome do Cliente.</p>
+        </div>
+
+        <!-- Crédito da ArrumaSite. Manter em todos os sites de cliente. -->
+        <a
+          class="site-footer__credit"
+          href="https://arrumasite.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Desenvolvido por <strong>ArrumaSite</strong>
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
