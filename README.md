@@ -1,7 +1,8 @@
-# client-template-arrumasite
+# farmacia-violeta
 
-Template base para os sites de clientes da ArrumaSite. Site estático em
-**HTML, CSS e JavaScript puro**, sem build e sem dependências.
+Site da Farmácia Violeta, farmácia de manipulação humana e veterinária. Site
+estático em **HTML, CSS e JavaScript puro**, sem build e sem dependências,
+criado a partir do template de clientes da ArrumaSite.
 
 ## Antes de começar: é este o caminho?
 

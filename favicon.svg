@@ -1,5 +1,10 @@
-<!-- Favicon placeholder. Troque pelo do cliente. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#1a1a1a" />
-  <circle cx="32" cy="32" r="13" fill="#2f6df0" />
+  <rect width="64" height="64" rx="14" fill="#4c2c68" />
+  <g fill="#c9a6e6">
+    <circle cx="32" cy="22" r="8" />
+    <circle cx="32" cy="42" r="8" />
+    <circle cx="22" cy="32" r="8" />
+    <circle cx="42" cy="32" r="8" />
+  </g>
+  <circle cx="32" cy="32" r="6" fill="#fbf8fb" />
 </svg>
