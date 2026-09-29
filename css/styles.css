@@ -293,12 +293,12 @@ table {
   font-size: 1.15rem;
 }
 
-.site-header__brand-mark {
-  width: 1.6rem;
-  height: 1.6rem;
+.site-header__logo {
+  height: 2.6rem;
+  width: auto;
   border-radius: 6px;
-  background: var(--cor-acento);
   flex: none;
+  object-fit: contain;
 }
 
 .site-header__actions {
@@ -487,24 +487,113 @@ table {
 
 /* ---------- Hero ---------- */
 .hero {
-  background: linear-gradient(180deg, var(--cor-fundo-alt), var(--cor-fundo) 70%);
+  position: relative;
+  background: linear-gradient(160deg, var(--cor-texto), color-mix(in srgb, var(--cor-texto) 78%, black));
   overflow: hidden;
 }
 
+.hero .section__eyebrow {
+  background: rgba(251, 248, 251, 0.08);
+  border-color: rgba(251, 248, 251, 0.22);
+  color: var(--cor-fundo);
+}
+
+.hero__title {
+  color: var(--cor-fundo);
+}
+
+.hero__text {
+  color: color-mix(in srgb, var(--cor-fundo) 72%, transparent);
+}
+
+.hero__aviso {
+  color: color-mix(in srgb, var(--cor-fundo) 55%, transparent);
+}
+
+.hero .btn--ghost {
+  color: var(--cor-fundo);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--cor-fundo) 35%, transparent);
+}
+
+.hero .btn--ghost:hover {
+  background: color-mix(in srgb, var(--cor-fundo) 12%, transparent);
+}
+
+.hero__glow {
+  position: absolute;
+  inset: -25% -10% auto -10%;
+  height: 640px;
+  background: radial-gradient(circle at 28% 32%, color-mix(in srgb, var(--cor-coral) 75%, transparent), transparent 60%),
+    radial-gradient(circle at 78% 18%, color-mix(in srgb, var(--cor-menta) 75%, transparent), transparent 55%),
+    radial-gradient(circle at 55% 78%, color-mix(in srgb, var(--cor-acento) 65%, transparent), transparent 60%);
+  filter: blur(30px);
+  opacity: 0.65;
+  animation: hero-glow 18s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes hero-glow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2%, 3%, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-3%, -1%, 0) scale(1.02);
+  }
+}
+
 .hero__inner {
+  position: relative;
   display: grid;
   gap: 2.5rem;
   align-items: center;
 }
 
+.hero__reveal {
+  animation: hero-entrada 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--atraso, 0ms);
+}
+
+@keyframes hero-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero__title {
   margin-top: 1rem;
-  font-size: clamp(2.1rem, 1.5rem + 2.6vw, 3.6rem);
+  font-size: clamp(2.4rem, 1.5rem + 4vw, 4.6rem);
   font-family: var(--fonte-titulo);
   font-weight: 300;
-  letter-spacing: -0.015em;
-  line-height: 1.08;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
   max-width: 17ch;
+}
+
+.hero__destaque {
+  background: linear-gradient(100deg, var(--cor-acento), var(--cor-coral) 55%, var(--cor-acento-escuro));
+  background-size: 220% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: hero-shimmer 7s ease-in-out infinite;
+}
+
+@keyframes hero-shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .hero__text {
@@ -526,16 +615,153 @@ table {
 
 .hero__visual {
   position: relative;
+}
+
+.hero__blob {
+  position: absolute;
+  top: -26%;
+  right: -26%;
+  width: 86%;
+  height: 70%;
+  z-index: 0;
+  background: radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.75), transparent 42%),
+    linear-gradient(135deg, var(--cor-acento), var(--cor-coral) 55%, var(--cor-menta));
+  border-radius: 62% 38% 55% 45% / 45% 55% 45% 55%;
+  filter: drop-shadow(0 24px 40px color-mix(in srgb, var(--cor-acento) 35%, transparent));
+  animation: hero-blob-forma 13s ease-in-out infinite, hero-flutuar 9s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes hero-blob-forma {
+  0%,
+  100% {
+    border-radius: 62% 38% 55% 45% / 45% 55% 45% 55%;
+  }
+  33% {
+    border-radius: 45% 55% 38% 62% / 60% 40% 60% 40%;
+  }
+  66% {
+    border-radius: 55% 45% 62% 38% / 40% 60% 38% 62%;
+  }
+}
+
+.hero__anel {
+  position: absolute;
+  inset: -9%;
+  z-index: 1;
+  border: 2px solid color-mix(in srgb, var(--cor-fundo) 35%, transparent);
+  border-radius: 38% 62% 55% 45% / 45% 40% 60% 55%;
+  animation: hero-rotacao 26s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes hero-rotacao {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero__foto {
+  position: relative;
+  z-index: 2;
   height: 320px;
   border-radius: var(--raio);
   overflow: hidden;
   background: var(--cor-coral);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.35);
+  animation: hero-flutuar 7s ease-in-out infinite;
 }
 
-.hero__visual img {
+@keyframes hero-flutuar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero__foto img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hero__foto.hero__foto--secundaria {
+  position: absolute;
+  z-index: 4;
+  width: 48%;
+  height: 55%;
+  right: -8%;
+  bottom: -12%;
+  left: auto;
+  border: 4px solid var(--cor-texto);
+  transform: rotate(-5deg);
+  animation: hero-flutuar 7s ease-in-out infinite, hero-entrada 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.5s, 420ms;
+}
+
+.hero__selo {
+  position: absolute;
+  z-index: 3;
+  left: -1rem;
+  top: -1rem;
+  display: grid;
+  gap: 0.15rem;
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 0.9rem 1.15rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+  animation: hero-flutuar 7s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.hero__selo strong {
+  font-family: var(--fonte-titulo);
+  font-size: 1.3rem;
+  color: var(--cor-acento-escuro);
+}
+
+.hero__selo span {
+  font-size: 0.78rem;
+  color: var(--cor-texto-suave);
+}
+
+.hero__faixa {
+  position: relative;
+  margin-top: 2.5rem;
+  overflow: hidden;
+  background: var(--cor-acento);
+  padding-block: 0.85rem;
+}
+
+.hero__faixa-trilho {
+  display: flex;
+  width: max-content;
+  gap: 2.5rem;
+  animation: hero-marquee 26s linear infinite;
+}
+
+.hero__faixa-trilho span {
+  flex: none;
+  font: 600 0.8rem/1 system-ui, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--cor-fundo) 85%, transparent);
+}
+
+@keyframes hero-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @media (min-width: 860px) {
@@ -543,8 +769,21 @@ table {
     grid-template-columns: 1.1fr 0.9fr;
   }
 
-  .hero__visual {
+  .hero__foto {
     height: 420px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__glow,
+  .hero__reveal,
+  .hero__destaque,
+  .hero__blob,
+  .hero__anel,
+  .hero__foto,
+  .hero__selo,
+  .hero__faixa-trilho {
+    animation: none;
   }
 }
 

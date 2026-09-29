@@ -28,8 +28,13 @@
     <header class="site-header">
       <div class="container site-header__bar">
         <a href="#inicio" class="site-header__brand">
-          <span class="site-header__brand-mark" aria-hidden="true"></span>
-          Farmácia Violeta
+          <img
+            class="site-header__logo"
+            src="assets/img/logo.jpeg"
+            alt="Farmácia Violeta"
+            width="1600"
+            height="711"
+          />
         </a>
 
         <nav class="site-nav" aria-label="Navegação principal">
@@ -59,17 +64,20 @@
     </header>
 
     <main id="conteudo">
-      <section id="inicio" class="hero section">
-        <div class="container hero__inner">
-          <div>
-            <p class="section__eyebrow">Farmácia de manipulação</p>
-            <h1 class="hero__title">Fórmulas feitas sob medida para você e para quem você cuida</h1>
-            <p class="hero__text">
+      <section id="inicio" class="hero">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="container section hero__inner">
+          <div class="hero__content">
+            <p class="section__eyebrow hero__reveal" style="--atraso: 0ms">Farmácia de manipulação</p>
+            <h1 class="hero__title hero__reveal" style="--atraso: 80ms">
+              Fórmulas feitas <span class="hero__destaque">sob medida</span> para você e para quem você cuida
+            </h1>
+            <p class="hero__text hero__reveal" style="--atraso: 160ms">
               Há mais de 30 anos preparando fórmulas humanas e veterinárias com atenção
               individual, do jeito que cada tratamento pede. Homeopatia, florais e
               orientação farmacêutica de verdade.
             </p>
-            <div class="btn-row">
+            <div class="btn-row hero__reveal" style="--atraso: 240ms">
               <a
                 class="btn"
                 href="https://wa.me/5511984170111?text=Ol%C3%A1%2C%20gostaria%20de%20enviar%20uma%20receita%20para%20or%C3%A7amento"
@@ -80,16 +88,47 @@
               </a>
               <a class="btn btn--ghost" href="#formulas">Ver fórmulas</a>
             </div>
-            <p class="hero__aviso">Resposta com orçamento no mesmo dia útil, sem compromisso.</p>
+            <p class="hero__aviso hero__reveal" style="--atraso: 300ms">Resposta com orçamento no mesmo dia útil, sem compromisso.</p>
           </div>
 
-          <div class="hero__visual">
-            <!-- Foto de banco (Pexels, uso livre). Trocar por foto real da farmácia quando tiver. -->
-            <img
-              src="assets/img/hero.jpg"
-              alt="Farmacêutico preparando fórmula manipulada em almofariz"
-              loading="eager"
-            />
+          <div class="hero__visual hero__reveal" style="--atraso: 120ms">
+            <span class="hero__blob" aria-hidden="true"></span>
+            <span class="hero__anel" aria-hidden="true"></span>
+            <div class="hero__foto hero__foto--principal">
+              <!-- Foto de banco (Pexels, uso livre). Trocar por foto real da farmácia quando tiver. -->
+              <img
+                src="assets/img/hero.jpg"
+                alt="Farmacêutico preparando fórmula manipulada em almofariz"
+                loading="eager"
+              />
+            </div>
+            <div class="hero__foto hero__foto--secundaria">
+              <!-- Foto de banco (Pexels, uso livre). Trocar por foto real da farmácia quando tiver. -->
+              <img
+                src="assets/img/hero-2.jpg"
+                alt="Farmacêutico segurando cápsulas e um pote de fórmula manipulada"
+                loading="eager"
+              />
+            </div>
+            <div class="hero__selo">
+              <strong>+30 anos</strong>
+              <span>cuidando de famílias e pets</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__faixa" aria-hidden="true">
+          <div class="hero__faixa-trilho">
+            <span>Farmacêuticos habilitados</span>
+            <span>Manipulação humana e veterinária</span>
+            <span>Homeopatia e florais</span>
+            <span>Mais de 30 anos de experiência</span>
+            <span>Orçamento pelo WhatsApp</span>
+            <span>Farmacêuticos habilitados</span>
+            <span>Manipulação humana e veterinária</span>
+            <span>Homeopatia e florais</span>
+            <span>Mais de 30 anos de experiência</span>
+            <span>Orçamento pelo WhatsApp</span>
           </div>
         </div>
       </section>
