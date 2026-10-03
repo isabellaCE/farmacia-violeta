@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --color-violet-950: #2a1440;
+  --color-violet-900: #331a4d;
+  --color-violet-800: #402260;
+  --color-violet-700: #522b78;
+  --color-violet-600: #63348f;
+  --color-violet-500: #7943a6;
+
+  --color-peach-50: #fdf4ea;
+  --color-peach-100: #fbe8d3;
+  --color-peach-200: #f6d3ac;
+  --color-peach-300: #f2bd88;
+  --color-peach-400: #f0af79;
+  --color-peach-500: #eea36c;
+  --color-peach-600: #e0854a;
+  --color-peach-700: #c56a37;
+  --color-peach-800: #a9521f;
+
+  --color-mint-100: #e1f1e3;
+  --color-mint-300: #b9dcc0;
+  --color-mint-600: #4c8a5c;
+
+  --color-cream: #fbf6ef;
+
+  --background: var(--color-cream);
+  --foreground: var(--color-violet-950);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-violet-950: var(--color-violet-950);
+  --color-violet-900: var(--color-violet-900);
+  --color-violet-800: var(--color-violet-800);
+  --color-violet-700: var(--color-violet-700);
+  --color-violet-600: var(--color-violet-600);
+  --color-violet-500: var(--color-violet-500);
+
+  --color-peach-50: var(--color-peach-50);
+  --color-peach-100: var(--color-peach-100);
+  --color-peach-200: var(--color-peach-200);
+  --color-peach-300: var(--color-peach-300);
+  --color-peach-400: var(--color-peach-400);
+  --color-peach-500: var(--color-peach-500);
+  --color-peach-600: var(--color-peach-600);
+  --color-peach-700: var(--color-peach-700);
+  --color-peach-800: var(--color-peach-800);
+
+  --color-mint-100: var(--color-mint-100);
+  --color-mint-300: var(--color-mint-300);
+  --color-mint-600: var(--color-mint-600);
+
+  --color-cream: var(--color-cream);
+
+  --font-display: var(--font-fredoka);
+  --font-sans: var(--font-poppins);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-violet-700);
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+/* Sobre fundos violeta o anel pêssego-claro mantém contraste (≥3:1). */
+.on-dark :focus-visible {
+  outline-color: var(--color-peach-300);
+}
+
+/* Superfície clara dentro de uma seção escura volta ao anel violeta. */
+.on-dark .on-light :focus-visible {
+  outline-color: var(--color-violet-700);
+}
+
+::selection {
+  background: var(--color-peach-400);
+  color: var(--color-violet-950);
+}
+
+.container-px {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .container-px {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}

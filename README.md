@@ -1,57 +1,36 @@
-# farmacia-violeta
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Site da Farmácia Violeta, farmácia de manipulação humana e veterinária. Site
-estático em **HTML, CSS e JavaScript puro**, sem build e sem dependências,
-criado a partir do template de clientes da ArrumaSite.
+## Getting Started
 
-## Antes de começar: é este o caminho?
+First, run the development server:
 
-A ArrumaSite tem dois caminhos, e quem decide é o **tamanho do site**.
-
-| | Quando usar | Exemplos |
-|---|---|---|
-| **Este template** | Landing page única ou site de poucas rotas, com conteúdo estável | `globo-pan-doces`, `lumelight` |
-| **Nuxt 3 + Vue 3 + TS + SCSS** | Site grande: mais de umas dez rotas, catálogo, blog, ou muitas páginas de template idêntico | `personalize-agua`, `hiperpack`, `muralha`, `jucelblocos` |
-
-O sinal mais claro de que o site passou do ponto: **você querer um gerador ou um
-script de build só para não repetir cabeçalho e rodapé em vários arquivos.** Se
-precisa furar a regra da stack para o site caber aqui, ele não cabe.
-
-Existe uma exceção que não é de tamanho: manter o padrão de um cliente irmão. O
-`personalize-brinde` tem quatro páginas e é Nuxt porque é do mesmo dono do
-`personalize-agua`.
-
-Na dúvida, comece por aqui. Migrar deste template para Nuxt depois é tranquilo.
-A seção 2 do [AGENTS.md](AGENTS.md) detalha a decisão.
-
-## Como usar
-
-1. Crie um repositório novo a partir deste template (ou clone e troque o remote).
-2. Abra `index.html` no navegador. Para recarregar automático, use uma extensão
-   de "Live Server" ou rode `npx serve` na pasta.
-3. Dê a cara do cliente: edite os tokens em `:root` no `css/styles.css`, troque
-   o logo, o favicon e os textos.
-
-## Estrutura
-
-```
-index.html        Página do cliente
-css/styles.css    Estilos (tokens de tema no topo, em :root)
-js/main.js        JavaScript mínimo (menu mobile, ano do rodapé)
-assets/           Imagens, ícones e fontes
-AGENTS.md         Guia completo. Leia antes de implementar, é a fonte da verdade
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Para implementar com IA
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-O **[AGENTS.md](AGENTS.md)** descreve a escolha de stack, a lógica de estrutura,
-as convenções e o tom de texto. Ferramentas de IA que leem `AGENTS.md` (como o
-Claude Code) já pegam essas regras automaticamente.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Peça sempre que a IA avalie a seção 2 antes de escrever a primeira linha: é lá
-que se decide se o cliente fica neste template ou vai para Nuxt.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Deploy
+## Learn More
 
-Arquivos estáticos, publicável no GitHub Pages. No futuro, cada cliente será
-integrado ao site principal em `arrumasite.com/cliente`.
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
