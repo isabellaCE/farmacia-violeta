@@ -5,6 +5,7 @@ import { MessageCircle, ArrowRight, FlaskConical, PawPrint, Microscope } from "l
 import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { asset } from "@/lib/asset";
 import { whatsappUrl } from "@/lib/site";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -127,7 +128,7 @@ export function Hero() {
             className="relative mx-auto w-full max-w-xl lg:w-[118%] lg:max-w-none"
           >
             <Image
-              src="/hero/hero-products.webp"
+              src={asset("/hero/hero-products.webp")}
               alt="Frascos de manipulação da Violeta, EVA 360 e Fitaxin, ao lado de um polivitamínico e cápsulas"
               width={1385}
               height={954}

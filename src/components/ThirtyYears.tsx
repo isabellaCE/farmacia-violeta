@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Flower } from "@/components/decor/Flower";
 import { EnteringShape } from "@/components/decor/EnteringShape";
 import { VideoPlayer } from "@/components/ui/VideoPlayer";
+import { asset } from "@/lib/asset";
 import { WaveDivider } from "@/components/ui/WaveDivider";
 
 // Marcos tirados do próprio vídeo dos 30 anos. Confirmar datas e termos com a farmácia.
@@ -64,8 +65,8 @@ export function ThirtyYears() {
             <Flower className="h-full w-full" />
           </EnteringShape>
           <VideoPlayer
-            src="/assets/video30anos.mp4"
-            poster="/assets/video30anos-poster.webp"
+            src={asset("/assets/video30anos.mp4")}
+            poster={asset("/assets/video30anos-poster.webp")}
             title="Vídeo dos 30 anos da Violeta"
             className="relative z-10 rounded-[2rem] shadow-2xl shadow-violet-950/40 ring-1 ring-cream/15"
           />

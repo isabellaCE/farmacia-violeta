@@ -5,6 +5,7 @@ import { PawPrint, Stethoscope, ClipboardCheck, FlaskConical, MessageCircle } fr
 import type { LucideIcon } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { VideoPlayer } from "@/components/ui/VideoPlayer";
+import { asset } from "@/lib/asset";
 import { whatsappUrl } from "@/lib/site";
 
 const CHIPS: { icon: LucideIcon; label: string }[] = [
@@ -29,8 +30,8 @@ export function PetSection() {
             className="absolute -right-6 -top-6 z-0 h-14 w-14 -rotate-12 text-violet-700/40"
           />
           <VideoPlayer
-            src="/assets/pets.mp4"
-            poster="/assets/pets-poster.webp"
+            src={asset("/assets/pets.mp4")}
+            poster={asset("/assets/pets-poster.webp")}
             title="Vídeo sobre cuidados dermatológicos para pets"
             className="relative z-10 rounded-[2rem] shadow-2xl shadow-violet-900/25 ring-1 ring-violet-900/10"
           />

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { InstagramIcon } from "@/components/decor/InstagramIcon";
+import { asset } from "@/lib/asset";
 import { SITE, whatsappUrl } from "@/lib/site";
 
 const linkClass = "transition-colors hover:text-peach-300";
@@ -16,7 +17,7 @@ export function Footer() {
       <Container className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.1fr]">
         <div>
           <Image
-            src="/brand/logo.png"
+            src={asset("/brand/logo.png")}
             alt="Violeta Farmácia com Manipulação"
             width={1395}
             height={613}

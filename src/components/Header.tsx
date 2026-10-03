@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { asset } from "@/lib/asset";
 import { whatsappUrl } from "@/lib/site";
 
 const NAV_LINKS = [
@@ -31,7 +32,7 @@ export function Header() {
       <Container className="flex items-center justify-between py-3">
         <a href="#hero" className="flex items-center gap-3 shrink-0">
           <Image
-            src="/brand/logo.png"
+            src={asset("/brand/logo.png")}
             alt="Violeta Farmácia com Manipulação"
             width={1395}
             height={613}
